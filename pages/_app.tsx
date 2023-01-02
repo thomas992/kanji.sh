@@ -1,7 +1,7 @@
 import React from 'react';
 import { AppProps } from 'next/app';
-import { ThemeProvider } from '@material-ui/core/styles';
-import CssBaseline from '@material-ui/core/CssBaseline';
+import { ThemeProvider } from '@mui/material/styles';
+import CssBaseline from '@mui/material/CssBaseline';
 import theme from '../src/theme';
 import { useRouter } from 'next/router';
 import Config from '../src/config/Config';

@@ -1,9 +1,8 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 import React from 'react';
 import Document, { Head, Html, Main, NextScript } from 'next/document';
-import { ServerStyleSheets } from '@material-ui/core/styles';
+import { ServerStyleSheets } from '@mui/styles';
 import theme from '../src/theme';
-import GoogleFonts from 'next-google-fonts';
 import { ServerStyleSheet } from 'styled-components';
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -26,7 +25,10 @@ export default class MyDocument extends Document {
         // noinspection HtmlRequiredTitleElement
         return (
             <Html lang="en">
-                <GoogleFonts href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Quicksand:wght@500;700&display=swap" />
+                <link
+                    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Quicksand:wght@500;700&display=swap"
+                    rel="stylesheet"
+                />
                 <Head>
                     {/* Meta Headers */}
                     <meta charSet="utf-8" />

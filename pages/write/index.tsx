@@ -2,7 +2,7 @@ import React from 'react';
 import PageLayout from '../../src/PageLayout';
 import Jumbotron from '../../src/component/Jumbotron';
 import CollectionCard from '../../src/component/CollectionCard';
-import { Grid } from '@material-ui/core';
+import { Grid } from '@mui/material';
 import Spacer from '../../src/component/atoms/Spacer';
 
 const WritePage: React.FC = () => {

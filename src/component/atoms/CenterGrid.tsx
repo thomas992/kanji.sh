@@ -1,5 +1,5 @@
-import { GridProps, styled } from '@material-ui/core';
-import Grid from '@material-ui/core/Grid';
+import { GridProps, styled } from '@mui/material';
+import Grid from '@mui/material/Grid';
 import React from 'react';
 
 const StyledGrid = styled(Grid)(() => ({

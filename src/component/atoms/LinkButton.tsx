@@ -1,7 +1,7 @@
-import Button from '@material-ui/core/Button';
-import Link from '@material-ui/core/Link';
+import Button from '@mui/material/Button';
+import Link from '@mui/material/Link';
 import React, { PropsWithChildren } from 'react';
-import { styled } from '@material-ui/core';
+import { styled } from '@mui/material';
 
 const ExternalButton = styled(Button)({
     borderRadius: '100px',

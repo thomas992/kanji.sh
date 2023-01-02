@@ -1,12 +1,12 @@
-import Grid from '@material-ui/core/Grid';
+import Grid from '@mui/material/Grid';
 import InputField from '../atoms/InputField';
-import Container from '@material-ui/core/Container';
+import Container from '@mui/material/Container';
 import PrimaryButton from '../atoms/PrimaryButton';
 import CenterGrid from '../atoms/CenterGrid';
 import { Field, Form, Formik } from 'formik';
 import React from 'react';
-import { LinearProgress } from '@material-ui/core';
-import Typography from '@material-ui/core/Typography';
+import { LinearProgress } from '@mui/material';
+import Typography from '@mui/material/Typography';
 
 interface Subscription {
     firstName?: string;

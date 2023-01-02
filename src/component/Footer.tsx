@@ -1,13 +1,13 @@
 import React from 'react';
-import makeStyles from '@material-ui/core/styles/makeStyles';
-import AppBar from '@material-ui/core/AppBar';
-import Typography from '@material-ui/core/Typography';
-import { Grid, Link as MuiLink } from '@material-ui/core';
+import { makeStyles } from '@mui/styles';
+import AppBar from '@mui/material/AppBar';
+import Typography from '@mui/material/Typography';
+import { Grid, Link as MuiLink, Theme } from '@mui/material';
 import Link from 'next/link';
-import Hidden from '@material-ui/core/Hidden';
+import Hidden from '@mui/material/Hidden';
 import Spacer from './atoms/Spacer';
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles((theme: Theme) => ({
     root: {
         position: 'absolute',
         left: 0,
@@ -55,7 +55,7 @@ const Footer: React.FC = () => {
                 color={'primary'}
                 elevation={0}
                 component={'div'}>
-                <Grid container alignItems={'center'} justify={'center'}>
+                <Grid container alignItems={'center'} justifyContent={'center'}>
                     <Grid item xs={12} md={6} className={classes.footerRow}>
                         <Typography className={classes.copyright} variant="body1" noWrap>
                             Crafted by{' '}

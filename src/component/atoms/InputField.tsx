@@ -1,6 +1,6 @@
-import { styled } from '@material-ui/core';
-import 'formik-material-ui';
-import { TextField, TextFieldProps } from 'formik-material-ui';
+import { styled } from '@mui/material';
+import 'formik-mui';
+import { TextField, TextFieldProps } from 'formik-mui';
 
 const StyledTextField = styled(TextField)(() => ({}));
 

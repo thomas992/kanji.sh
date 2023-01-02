@@ -1,9 +1,9 @@
 import React from 'react';
-import { createStyles, Theme, withStyles, WithStyles } from '@material-ui/core/styles';
+import { createStyles, Theme } from '@mui/material/styles';
 import Header from './component/Header';
 import Footer from './component/Footer';
-import Container from '@material-ui/core/Container';
-import { StyleRules } from '@material-ui/styles';
+import Container from '@mui/material/Container';
+import { ClassNameMap, StyleRules, WithStyles, withStyles } from '@mui/styles';
 
 const styles = (theme: Theme): StyleRules =>
     createStyles({
@@ -18,7 +18,10 @@ const styles = (theme: Theme): StyleRules =>
         }
     });
 
-export const PageLayout: React.FC<WithStyles<typeof styles>> = (props) => {
+export const PageLayout: React.FC<WithStyles<typeof styles>> = (props: {
+    classes: ClassNameMap;
+    children?: JSX.Element[];
+}) => {
     const { classes, children } = props;
     return (
         <div className={classes.root}>

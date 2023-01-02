@@ -1,13 +1,14 @@
 import React from 'react';
 import PageLayout from '../../src/PageLayout';
-import makeStyles from '@material-ui/core/styles/makeStyles';
-import Typography from '@material-ui/core/Typography';
-import Grid from '@material-ui/core/Grid';
+import { makeStyles } from '@mui/styles';
+import Typography from '@mui/material/Typography';
+import Grid from '@mui/material/Grid';
 import { ConstructionAnimation } from '../../src/component/atoms/AnimatedImage';
 import Spacer from '../../src/component/atoms/Spacer';
 import SubscriptionForm from '../../src/component/molecules/SubscriptionForm';
+import { Theme } from '@mui/material';
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles((theme: Theme) => ({
     root: {
         flexGrow: 1
     },
@@ -42,7 +43,7 @@ const ReadPage: React.FC = () => {
                 direction={'column'}
                 alignItems={'stretch'}
                 spacing={5}
-                justify={'center'}>
+                justifyContent={'center'}>
                 <Grid item xs={12} className={classes.centerText}>
                     <Typography variant={'h3'}>Ooops!</Typography>
                 </Grid>

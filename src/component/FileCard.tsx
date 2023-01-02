@@ -1,13 +1,14 @@
 import React, { useState } from 'react';
-import { Button, createStyles, StyleRules, Theme, WithStyles } from '@material-ui/core';
-import Card from '@material-ui/core/Card';
-import CardContent from '@material-ui/core/CardContent';
-import CardMedia from '@material-ui/core/CardMedia';
-import Typography from '@material-ui/core/Typography';
+import { Button, createStyles, Theme } from '@mui/material';
+import Card from '@mui/material/Card';
+import CardContent from '@mui/material/CardContent';
+import CardMedia from '@mui/material/CardMedia';
+import Typography from '@mui/material/Typography';
 import { FileData } from '../Metadata';
-import withStyles from '@material-ui/core/styles/withStyles';
+import { StyleRules, WithStyles } from '@mui/styles/withStyles';
+import withStyles from '@mui/styles/withStyles';
 import { logEvent } from '../firebase';
-import { GetAppRounded, VisibilityRounded } from '@material-ui/icons';
+import { GetAppRounded, VisibilityRounded } from '@mui/icons-material';
 import FilePreview from './FilePreview';
 
 const NORMAL_ELEVATION = 2;
@@ -59,12 +60,12 @@ const FileCard: (props: Props) => JSX.Element = (props: Props) => {
 
     const _lower: () => void = () => setElevation(NORMAL_ELEVATION);
 
-    const _downloadFile: (fileData: FileData) => void = (fileData: FileData) => {
-        logEvent('file_download', { file: fileData.title });
+    const _downloadFile: (fileData: FileData) => void = (/*fileData: FileData*/) => {
+        logEvent(/*'file_download', { file: fileData.title }*/);
     };
 
-    const _previewFile: (fileData: FileData) => void = (fileData: FileData) => {
-        logEvent('file_preview', { file: fileData.title });
+    const _previewFile: (fileData: FileData) => void = (/*fileData: FileData*/) => {
+        logEvent(/*'file_preview', { file: fileData.title }*/);
         setOpen(true);
     };
 

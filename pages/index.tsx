@@ -1,16 +1,16 @@
 import React from 'react';
 import PageLayout from '../src/PageLayout';
-import makeStyles from '@material-ui/core/styles/makeStyles';
-import Container from '@material-ui/core/Container';
-import Grid from '@material-ui/core/Grid';
-import Box from '@material-ui/core/Box';
-import Typography from '@material-ui/core/Typography';
-import { Hidden } from '@material-ui/core';
+import { makeStyles } from '@mui/styles';
+import Container from '@mui/material/Container';
+import Grid from '@mui/material/Grid';
+import Box from '@mui/material/Box';
+import Typography from '@mui/material/Typography';
+import { Hidden, Theme } from '@mui/material';
 import ServiceCard, { Direction } from '../src/component/ServiceCard';
 import { ReadingBookAnimation } from '../src/component/atoms/AnimatedImage';
 import Spacer from '../src/component/atoms/Spacer';
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles((theme: Theme) => ({
     root: {
         flexGrow: 1,
         backgroundBlendMode: 'lighten',
@@ -63,7 +63,7 @@ const HomePage: React.FC = () => {
                 <Grid
                     container
                     direction={'row'}
-                    justify={'center'}
+                    justifyContent={'center'}
                     alignItems={'stretch'}
                     spacing={4}
                     style={{ minHeight: 'inherit' }}>
@@ -74,7 +74,7 @@ const HomePage: React.FC = () => {
                                 container
                                 className={classes.textContainer}
                                 direction="column"
-                                justify="center"
+                                justifyContent="center"
                                 alignContent={'center'}
                                 alignItems={'center'}>
                                 <Grid item>
@@ -109,7 +109,7 @@ const HomePage: React.FC = () => {
 
             <Spacer space={4} />
 
-            <Grid container direction={'column'} justify={'center'}>
+            <Grid container direction={'column'} justifyContent={'center'}>
                 <Grid item xs={12}>
                     <ServiceCard
                         title={'read'}

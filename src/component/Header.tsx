@@ -1,16 +1,17 @@
 import React from 'react';
-import makeStyles from '@material-ui/core/styles/makeStyles';
-import AppBar from '@material-ui/core/AppBar';
-import Toolbar from '@material-ui/core/Toolbar';
-import Typography from '@material-ui/core/Typography';
-import Container from '@material-ui/core/Container';
+import { makeStyles } from '@mui/styles';
+import AppBar from '@mui/material/AppBar';
+import Toolbar from '@mui/material/Toolbar';
+import Typography from '@mui/material/Typography';
+import Container from '@mui/material/Container';
 import Link from 'next/link';
 import { logEvent } from '../firebase';
 import Spacer from './atoms/Spacer';
 import DonateButton from './atoms/DonateButton';
 import HeaderNav from './molecules/HeaderNav';
+import { Theme } from '@mui/material';
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles((theme: Theme) => ({
     root: {
         flexGrow: 1,
         backgroundColor: theme.palette.primary.dark,
@@ -67,11 +68,11 @@ const Header: React.FC = () => {
                 <Container>
                     <Toolbar className={classes.toolbar}>
                         <div>
-                            <Link href={'/'}>
+                            <Link legacyBehavior href={'/'}>
                                 {/* eslint-disable-next-line jsx-a11y/anchor-is-valid,jsx-a11y/click-events-have-key-events,jsx-a11y/no-static-element-interactions */}
                                 <a
                                     className={classes.navLink}
-                                    onClick={() => logEvent('navigation', { path: 'home' })}>
+                                    onClick={() => logEvent(/*'navigation', { path: 'home' }*/)}>
                                     <Typography className={classes.title} variant="h3">
                                         kanji.sh
                                     </Typography>

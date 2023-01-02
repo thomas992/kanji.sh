@@ -1,10 +1,10 @@
 import React from 'react';
-import { createStyles, StyleRules, Theme, WithStyles } from '@material-ui/core';
-import Typography from '@material-ui/core/Typography';
-import withStyles from '@material-ui/core/styles/withStyles';
-import Grid from '@material-ui/core/Grid';
-import Box from '@material-ui/core/Box';
-import Card from '@material-ui/core/Card';
+import { createStyles, Theme } from '@mui/material';
+import { StyleRules, WithStyles, withStyles } from '@mui/styles';
+import Typography from '@mui/material/Typography';
+import Grid from '@mui/material/Grid';
+import Box from '@mui/material/Box';
+import Card from '@mui/material/Card';
 
 const styles = (theme: Theme): StyleRules =>
     createStyles({

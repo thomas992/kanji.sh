@@ -1,6 +1,6 @@
-import { Facebook, Reddit, Twitter } from '@material-ui/icons';
+import { Facebook, Reddit, Twitter } from '@mui/icons-material';
 import React from 'react';
-import { styled } from '@material-ui/core';
+import { styled } from '@mui/material';
 import LinkButton from '../atoms/LinkButton';
 
 const SocialButton = styled(LinkButton)(({ theme }) => ({

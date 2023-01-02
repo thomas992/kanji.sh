@@ -2,14 +2,15 @@ import { GetStaticPaths, GetStaticProps } from 'next';
 import PageLayout from '../../../src/PageLayout';
 import { GroupData, mappedData } from '../../../src/Metadata';
 import React from 'react';
-import makeStyles from '@material-ui/core/styles/makeStyles';
-import Grid from '@material-ui/core/Grid';
+import { makeStyles } from '@mui/styles';
+import Grid from '@mui/material/Grid';
 import FileCard from '../../../src/component/FileCard';
-import Typography from '@material-ui/core/Typography';
+import Typography from '@mui/material/Typography';
+import { Theme } from '@mui/material';
 
 type CollectionParam = { collection: string };
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles((theme: Theme) => ({
     root: {
         flexGrow: 1
     },
@@ -38,7 +39,7 @@ const CollectionPage: React.FC<{ collectionId: string }> = (pathParams) => {
                 spacing={4}
                 alignItems={'center'}
                 alignContent={'flex-start'}
-                justify={'flex-start'}>
+                justifyContent={'flex-start'}>
                 {groupData.files.map((fileData) => (
                     <Grid key={fileData.filePath} item xs={12} sm={4} md={3} xl={2}>
                         <FileCard fileData={fileData} />

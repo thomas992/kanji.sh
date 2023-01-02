@@ -1,10 +1,10 @@
 import React from 'react';
 import PageLayout from '../../src/PageLayout';
-import Typography from '@material-ui/core/Typography';
-import Link from '@material-ui/core/Link';
+import Typography from '@mui/material/Typography';
+import Link from '@mui/material/Link';
 import Config from '../../src/config/Config';
 import ShareSheet from '../../src/component/molecules/ShareSheet';
-import { AttachMoneyRounded, EmailRounded, GitHub } from '@material-ui/icons';
+import { AttachMoneyRounded, EmailRounded, GitHub } from '@mui/icons-material';
 import LinkButton from '../../src/component/atoms/LinkButton';
 import TextLogo from '../../src/component/atoms/TextLogo';
 

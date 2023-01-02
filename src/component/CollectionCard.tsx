@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
-import { createStyles, StyleRules, Theme, WithStyles } from '@material-ui/core';
-import Card from '@material-ui/core/Card';
-import CardContent from '@material-ui/core/CardContent';
-import CardMedia from '@material-ui/core/CardMedia';
-import Typography from '@material-ui/core/Typography';
-import withStyles from '@material-ui/core/styles/withStyles';
+import { createStyles, Theme } from '@mui/material';
+import { StyleRules, WithStyles } from '@mui/styles';
+import Card from '@mui/material/Card';
+import CardContent from '@mui/material/CardContent';
+import CardMedia from '@mui/material/CardMedia';
+import Typography from '@mui/material/Typography';
+import withStyles from '@mui/styles/withStyles';
 import { withRouter } from 'next/router';
 import { WithRouterProps } from 'next/dist/client/with-router';
 

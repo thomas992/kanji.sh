@@ -1,19 +1,19 @@
 import React, { useEffect, useRef } from 'react';
-import { createStyles, Theme, withStyles, WithStyles } from '@material-ui/core/styles';
-import Button from '@material-ui/core/Button';
-import Dialog from '@material-ui/core/Dialog';
-import MuiDialogTitle from '@material-ui/core/DialogTitle';
-import MuiDialogContent from '@material-ui/core/DialogContent';
-import MuiDialogActions from '@material-ui/core/DialogActions';
-import IconButton from '@material-ui/core/IconButton';
-import CloseIcon from '@material-ui/icons/Close';
-import Typography from '@material-ui/core/Typography';
-import { CircularProgress, StyleRules } from '@material-ui/core';
+import { createStyles, Theme } from '@mui/material/styles';
+import { WithStyles, withStyles, StyleRules } from '@mui/styles';
+import Button from '@mui/material/Button';
+import Dialog from '@mui/material/Dialog';
+import MuiDialogTitle from '@mui/material/DialogTitle';
+import MuiDialogContent from '@mui/material/DialogContent';
+import MuiDialogActions from '@mui/material/DialogActions';
+import IconButton from '@mui/material/IconButton';
+import CloseIcon from '@mui/icons-material/Close';
+import Typography from '@mui/material/Typography';
+import { Box, CircularProgress } from '@mui/material';
 import { Document, Page } from 'react-pdf';
 import Spacer from './atoms/Spacer';
-import { ArrowBackRounded, ArrowForwardRounded } from '@material-ui/icons';
+import { ArrowBackRounded, ArrowForwardRounded } from '@mui/icons-material';
 import { FileData } from '../Metadata';
-import HiddenCss from '@material-ui/core/Hidden/HiddenCss';
 
 const styles = (theme: Theme): StyleRules =>
     createStyles({
@@ -62,7 +62,7 @@ export interface DialogTitleProps extends WithStyles<typeof styles> {
     onClose: () => void;
 }
 
-const DialogTitle = withStyles(styles)((props: DialogTitleProps) => {
+const DialogTitle = withStyles(styles)((props: any /*DialogTitleProps*/) => {
     const { children, classes, onClose, ...other } = props;
     return (
         <MuiDialogTitle disableTypography className={classes.root} {...other}>
@@ -176,16 +176,16 @@ const FilePreview: (props: FilePreviewProps) => JSX.Element = (props) => {
                     <p />
                     <Spacer />
                     <div hidden={!numPages}>
-                        <HiddenCss only={'xs'}>
+                        <Box sx={{ display: { xs: 'block', smUp: 'none' } }}>
                             <p>
                                 Page {pageNumber} of {numPages}
                             </p>
-                        </HiddenCss>
-                        <HiddenCss smUp={true}>
+                        </Box>
+                        <Box sx={{ display: { xs: 'none', smUp: 'none' } }}>
                             <p>
                                 {pageNumber}/{numPages}
                             </p>
-                        </HiddenCss>
+                        </Box>
                     </div>
 
                     <Spacer />

@@ -1,12 +1,13 @@
 import React from 'react';
-import makeStyles from '@material-ui/core/styles/makeStyles';
-import Typography from '@material-ui/core/Typography';
-import Container from '@material-ui/core/Container';
-import Grid from '@material-ui/core/Grid';
-import Box from '@material-ui/core/Box';
+import { makeStyles } from '@mui/styles';
+import Typography from '@mui/material/Typography';
+import Container from '@mui/material/Container';
+import Grid from '@mui/material/Grid';
+import Box from '@mui/material/Box';
 import { WritingAnimation } from './atoms/AnimatedImage';
+import { Theme } from '@mui/material';
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles((theme: Theme) => ({
     root: {
         flexGrow: 1,
         paddingTop: theme.spacing(4),
@@ -38,14 +39,14 @@ const Jumbotron: React.FC = () => {
     return (
         <div className={classes.root}>
             <Container>
-                <Grid container direction={'row'} justify={'center'} spacing={2}>
+                <Grid container direction={'row'} justifyContent={'center'} spacing={2}>
                     {/* Text Content */}
                     <Grid item xs={12} md={6}>
                         <Grid
                             container
                             className={classes.textContainer}
                             direction="column"
-                            justify="center">
+                            justifyContent="center">
                             <Grid item>
                                 <Typography
                                     gutterBottom

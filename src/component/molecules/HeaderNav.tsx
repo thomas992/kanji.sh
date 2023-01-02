@@ -1,10 +1,10 @@
 import { useRouter } from 'next/router';
 import { logEvent } from '../../firebase';
-import Typography from '@material-ui/core/Typography';
+import Typography from '@mui/material/Typography';
 import Link from 'next/link';
 import React from 'react';
 import { LinkProps } from 'next/dist/client/link';
-import { styled } from '@material-ui/core';
+import { styled } from '@mui/material';
 
 const StyledH6 = styled(Typography)(({ theme }) => ({
     display: 'contents',
@@ -42,9 +42,12 @@ interface HeaderNavProps extends React.PropsWithChildren<LinkProps> {
 const HeaderNav: React.FC<HeaderNavProps> = ({ eventPath, children, ...props }) => {
     const { asPath } = useRouter();
     const match = asPath.includes(props.href.toString());
+
+    console.log(eventPath);
+
     return (
         <Link {...props}>
-            <StyledA onClick={() => logEvent('navigation', { path: eventPath })}>
+            <StyledA onClick={() => logEvent(/*'navigation', { path: eventPath }*/)}>
                 {match ? (
                     <ActiveStyledH6 variant="h6" noWrap>
                         {children}
