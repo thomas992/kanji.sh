@@ -12,7 +12,7 @@ const svgTracesDir = path.join(outDir, 'svg', 'kanjiTracer');
 
 async function downloadAndExtract() {
     logger.start('Extracting KanjiVg file...');
-    const kanjiVgFile = path.join(config.srcDir, 'kanjivg-20160426-main.zip');
+    const kanjiVgFile = path.join(config.srcDir, 'kanjivg-20220427-main.zip');
     const zip = admZip(kanjiVgFile);
     await zip.extractAllTo(zipOutputDir, true);
     logger.done('KanjiVG extraction');
