@@ -1,5 +1,6 @@
 import React from 'react';
-import { createStyles, Theme } from '@mui/material/styles';
+import { Theme } from '@mui/material/styles';
+import createStyles from '@mui/styles/createStyles';
 import Header from './component/Header';
 import Footer from './component/Footer';
 import Container from '@mui/material/Container';

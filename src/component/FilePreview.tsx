@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from 'react';
-import { createStyles, Theme } from '@mui/material/styles';
+import { Theme } from '@mui/material/styles';
+import createStyles from '@mui/styles/createStyles';
 import { WithStyles, withStyles, StyleRules } from '@mui/styles';
 import Button from '@mui/material/Button';
 import Dialog from '@mui/material/Dialog';

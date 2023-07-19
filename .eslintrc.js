@@ -6,7 +6,7 @@ module.exports = {
     },
     parserOptions: { ecmaVersion: 8 },
     ignorePatterns: ['node_modules/*', '.next/*'],
-    extends: ['eslint:recommended'],
+    extends: ['plugin:@next/next/recommended','eslint:recommended'],
     overrides: [
         {
             files: ['**/*.ts', '**/*.tsx'],
@@ -36,7 +36,7 @@ module.exports = {
                         allowConciseArrowFunctionExpressionsStartingWithVoid: true
                     }
                 ],
-                'prettier/prettier': ['error', {}, { usePrettierrc: true }]
+                'prettier/prettier': ['error', {"endOfLine": "auto"}, { usePrettierrc: true }]
             }
         },
         {

@@ -1,5 +1,6 @@
 import React from 'react';
-import { createStyles, Theme } from '@mui/material';
+import { Theme } from '@mui/material';
+import createStyles from '@mui/styles/createStyles';
 import { StyleRules, WithStyles, withStyles } from '@mui/styles';
 import Typography from '@mui/material/Typography';
 import Grid from '@mui/material/Grid';

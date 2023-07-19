@@ -1,5 +1,11 @@
 # Kanji.sh: Generator
 
+npm i node-fetch@2.6.1 --force
+
+npm install --save-dev @next/eslint-plugin-next --force
+
+npm i p-queue@6.6.2
+
 This is the source code that generates PDF files. The directory structure is as follows:
 
     ├── build

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { createStyles, Theme } from '@mui/material';
+import { Theme } from '@mui/material';
+import createStyles from '@mui/styles/createStyles';
 import { StyleRules, WithStyles } from '@mui/styles';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
