@@ -97,7 +97,7 @@ async function generatePDF(data, outputFilePath, pageTitle) {
 
                 page.on('console', (consoleObj) => console.log(`[Browser]${consoleObj.text()}`));
                 await page.goto(
-                    `file:///${config.templateAbsolutePath}?data=${kanjiArray.join('')}&page=${
+                    `file:///C:/${config.templateAbsolutePath}?data=${kanjiArray.join('')}&page=${
                         index + 1
                     }&title=${pageTitle}`,
                     {
@@ -187,6 +187,7 @@ async function generateData(sourceName, group) {
 const yargs = require('yargs/yargs');
 const { hideBin } = require('yargs/helpers');
 const argv = yargs(hideBin(process.argv)).argv;
+const argt = "jlpt"
 
 let group = 50;
 if (argv.source === 'frequency' || argv.source === 'kanjigarden') {
@@ -196,10 +197,10 @@ if (argv.source === 'frequency' || argv.source === 'kanjigarden') {
     }
 }
 
-if (!argv.source) {
+/*if (!argv.source) {
     console.error('Source must be specified. See generator/sources directory.');
     process.exit(1);
-}
+}*/
 
 // If --dryRun flag is passed, the script will not generate any PDFs
 const dryRun = argv.dryRun;
@@ -207,7 +208,7 @@ const dryRun = argv.dryRun;
 const timerLabel = `Generate Data for ${argv.source}`;
 
 console.time(timerLabel);
-generateData(argv.source, group, argv.dryRun)
+generateData(argt, group, argv.dryRun)
     .then(function () {
         console.timeEnd(timerLabel);
         process.exit(0);
